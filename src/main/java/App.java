@@ -6,7 +6,24 @@ import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 
 public class App {
-  public static void main(String[] args) {}
+  public static void main(String[] args) {
+    String layout = "templates/layout.vtl";
+    get("/", (request, response) ->{
+      HashMap model = new HashMap();
+      model.put("template", "templates/enterCoins.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/result", (request, response) ->{
+      HashMap model = new HashMap();
+      String centsString = request.queryParams("cents");
+      Integer cents = Integer.parseInt(centsString);
+      String result = countCoins(cents);
+      model.put("change", result);
+      model.put("template", "templates/result.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+  }
 
   public static String countCoins(Integer cents) {
     Integer quarters = 0;
@@ -25,7 +42,7 @@ public class App {
       else {
         changeOutput += quartersString + " Quarters";
       }
-      if((cents%5 == 0 || cents <= 4) && cents != 0) {
+      if((cents%10 == 0 || cents <= 5) && cents != 0) {
         changeOutput += " and ";
       } else if (cents > 0) {
         changeOutput += ", ";
