@@ -20,9 +20,15 @@ public class AppTest extends FluentTest {
   @ClassRule
   public static ServerRule server = new ServerRule();
 
+  // @Test
+  // public void rootTest() {
+  //     goTo("http://localhost:4567/");
+  //     assertThat(pageSource()).contains("");
+  // }
+
   @Test
-  public void rootTest() {
-      goTo("http://localhost:4567/");
-      assertThat(pageSource()).contains("");
+  public void countCoins_countPennies_returnNumberOfPennies() {
+    App testApp = new App();
+    assertEquals(41, (int)testApp.countCoins(41));
   }
 }
