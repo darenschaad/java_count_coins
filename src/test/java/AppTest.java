@@ -29,11 +29,26 @@ public class AppTest extends FluentTest {
   @Test
   public void countCoins_countPennies_returnNumberOfPennies() {
     App testApp = new App();
-    assertEquals("1 Pennies", testApp.countCoins(1));
+    assertEquals("2 Pennies", testApp.countCoins(2));
   }
   @Test
   public void countCoins_countQuarters_returnNumberOfQuarters() {
     App testApp = new App();
     assertEquals("2 Quarters", testApp.countCoins(50));
+  }
+  @Test
+  public void countCoins_countDimes_returnNumberOfDimes() {
+    App testApp = new App();
+    assertEquals("2 Dimes", testApp.countCoins(20));
+  }
+  @Test
+  public void countCoins_countNickels_returnNumberOfNickels() {
+    App testApp = new App();
+    assertEquals("1 Nickel", testApp.countCoins(5));
+  }
+  @Test
+  public void countCoins_countMultipleCoinTypes_returnNumberOfCoins() {
+    App testApp = new App();
+    assertEquals("1 Quarter 1 Dime 1 Nickel 1 Penny", testApp.countCoins(41));
   }
 }
