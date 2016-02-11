@@ -49,6 +49,6 @@ public class AppTest extends FluentTest {
   @Test
   public void countCoins_countMultipleCoinTypes_returnNumberOfCoins() {
     App testApp = new App();
-    assertEquals("1 Quarter 1 Dime 1 Nickel 1 Penny", testApp.countCoins(41));
+    assertEquals("1 Quarter, 1 Dime, 1 Nickel and 1 Penny", testApp.countCoins(41));
   }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-02-11T17:15:21" hostname="epicodus-50.local" time="0.025">
+<testsuite name="AppTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-02-11T17:34:24" hostname="epicodus-50.local" time="0.023">
   <properties/>
-  <testcase name="countCoins_countPennies_returnNumberOfPennies" classname="AppTest" time="0.002"/>
+  <testcase name="countCoins_countPennies_returnNumberOfPennies" classname="AppTest" time="0.003"/>
   <testcase name="countCoins_countMultipleCoinTypes_returnNumberOfCoins" classname="AppTest" time="0.001"/>
-  <testcase name="countCoins_countNickels_returnNumberOfNickels" classname="AppTest" time="0.0"/>
-  <testcase name="countCoins_countDimes_returnNumberOfDimes" classname="AppTest" time="0.0"/>
-  <testcase name="countCoins_countQuarters_returnNumberOfQuarters" classname="AppTest" time="0.001"/>
+  <testcase name="countCoins_countNickels_returnNumberOfNickels" classname="AppTest" time="0.001"/>
+  <testcase name="countCoins_countDimes_returnNumberOfDimes" classname="AppTest" time="0.001"/>
+  <testcase name="countCoins_countQuarters_returnNumberOfQuarters" classname="AppTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
