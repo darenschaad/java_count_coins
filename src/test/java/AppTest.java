@@ -29,6 +29,11 @@ public class AppTest extends FluentTest {
   @Test
   public void countCoins_countPennies_returnNumberOfPennies() {
     App testApp = new App();
-    assertEquals(41, (int)testApp.countCoins(41));
+    assertEquals("1 Pennies", testApp.countCoins(1));
+  }
+  @Test
+  public void countCoins_countQuarters_returnNumberOfQuarters() {
+    App testApp = new App();
+    assertEquals("2 Quarters", testApp.countCoins(50));
   }
 }
