@@ -29,8 +29,14 @@ public class App {
     Integer quarters = 0;
     Integer dimes = 0;
     Integer nickels = 0;
+    Integer quarterLimit = 2;
+    Integer dimeLimit = 1;
+    Integer nickelLimit = 1;
     String changeOutput = "";
     while (cents >= 25) {
+      if(quarters == quarterLimit) {
+        break;
+      }
       cents -= 25;
       quarters++;
     }
@@ -49,6 +55,9 @@ public class App {
       }
     }
     while (cents >= 10) {
+      if(dimes == dimeLimit) {
+        break;
+      }
       cents -= 10;
       dimes++;
     }
@@ -67,6 +76,9 @@ public class App {
       }
     }
     while (cents >= 5) {
+      if(nickels == nickelLimit) {
+        break;
+      }
       cents -= 5;
       nickels++;
     }
